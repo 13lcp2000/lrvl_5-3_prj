@@ -44,3 +44,6 @@ Route::resource('pelicula', 'PeliculaController');
 
 // =========== Routes of the Cinema Web Application ===========
 
+Route::get('/', 'FrontController@index');
+Route::get('contacto', 'FrontController@contacto');
+Route::get('resenias', 'FrontController@resenias');
