@@ -18,3 +18,20 @@ Route::get('/', function () {
 Route::get('prueba', function () {
     return "Hola desde el Routes.php";
 });
+
+Route::get('nombre/{nombre}', function ($nombre) {
+    return 'Mi nombre es: '.$nombre;
+});
+
+Route::get('edad/{edad}', function ($edad) {
+    return 'Mi edad es: '.$edad;
+});
+
+Route::get('edad2/{edad?}', function ($edad = 20) {
+    return 'Mi EDAD es: '.$edad;
+});   
+
+Route::get('pruebactrl', 'PruebaController@index');
+Route::get('pruebaname/{nombre}', 'PruebaController@nombre');
+
+Route::resource('pelicula', 'PeliculaController');
