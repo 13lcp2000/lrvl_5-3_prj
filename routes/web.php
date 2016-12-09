@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// ====== Examples of using correctly some routes ======
+
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Route::get('prueba', function () {
     return "Hola desde el Routes.php";
@@ -35,3 +37,10 @@ Route::get('pruebactrl', 'PruebaController@index');
 Route::get('pruebaname/{nombre}', 'PruebaController@nombre');
 
 Route::resource('pelicula', 'PeliculaController');
+
+// ====== Examples of using correctly some routes ======
+
+
+
+// =========== Routes of the Cinema Web Application ===========
+
