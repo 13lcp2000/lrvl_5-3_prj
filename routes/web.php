@@ -47,3 +47,4 @@ Route::resource('pelicula', 'PeliculaController');
 Route::get('/', 'FrontController@index');
 Route::get('contacto', 'FrontController@contacto');
 Route::get('resenias', 'FrontController@resenias');
+Route::get('admin', 'FrontController@admin');

@@ -20,4 +20,9 @@ class FrontController extends Controller
     {
     	return view('resenias');
     }
+
+    public function admin()
+    {
+        return view('admin.index');
+    }
 }
