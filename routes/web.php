@@ -25,7 +25,7 @@ Route::get('nombre/{nombre}', function ($nombre) {
     return 'Mi nombre es: '.$nombre;
 });
 
-Route::get('edad/{edad}', function ($edad) {
+Route::get('eda@created/{edad}', function ($edad) {
     return 'Mi edad es: '.$edad;
 });
 
@@ -48,3 +48,4 @@ Route::get('/', 'FrontController@index');
 Route::get('contacto', 'FrontController@contacto');
 Route::get('resenias', 'FrontController@resenias');
 Route::get('admin', 'FrontController@admin');
+Route::resource('usuario', 'UsuarioController');
