@@ -1,6 +1,10 @@
 @extends('layouts.admin')
 
 @section('content')
+
+	<!-- aqui antes estaba el mensaje de validacion de los campos que no fueran vacios -->
+
+
 	<!--form action="">
 		<div class="form-group">
 			<label for="">Nombre</label>
@@ -17,6 +21,7 @@
 		<button class="btn btn-primary">Registrar</button>
 	</form-->
 	
+	@include('alerts.request')  <!-- esto me trae la plantilla de request que esta en la carpeta views/alerts -->
 	<br> <!-- un saltico para que se vea mas bonito xD -->
 	{!!Form::open(['route'=>'usuario.store', 'method'=>'POST'])!!}
 		<!--div class="form-group">
