@@ -23,6 +23,7 @@ endif-->
 @endif
 
 @section('content')
+<div class="users">
 	<table class="table">
 		<thead>
 			<th>Nombre</th>
@@ -37,7 +38,11 @@ endif-->
 		</tbody>
 		@endforeach
 	</table>
-
 	{!!$users->render()!!}
+</div>
+@endsection
 
-@stop
+	@section('scripts')
+		{!!Html::script('js/script3.js')!!}
+	@endsection
+
