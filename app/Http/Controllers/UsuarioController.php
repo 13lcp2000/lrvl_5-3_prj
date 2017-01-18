@@ -32,17 +32,20 @@ class UsuarioController extends Controller
     /*public function find(Route $route){
         $this->user = User::find($route->getParameter('usuario'));
         return $this->user;
-    }*/
+    }*/ 
 
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //$users = User::All();
-        $users = User::paginate(4); //para usar el paginador
+        $users = User::paginate(2); //para usar el paginador
+        if($request->ajax()){
+            return response()->json(view('usuario.users',compact('users'))->render());
+        }
         return view('usuario.index', compact('users'));
 
     }
