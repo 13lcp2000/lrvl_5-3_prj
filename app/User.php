@@ -4,6 +4,7 @@ namespace Cinema;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Contracts\Auth\CanResetPassword //to reset the password
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
