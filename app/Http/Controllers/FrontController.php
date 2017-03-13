@@ -3,6 +3,7 @@
 namespace Cinema\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Cinema\Pelicula;
 
 class FrontController extends Controller
 {
@@ -22,8 +23,9 @@ class FrontController extends Controller
     }
 
     public function resenias()
-    {
-    	return view('resenias');
+    {   
+        $peliculas = Pelicula::Peliculas();
+    	return view('resenias', compact('peliculas'));
     }
 
     public function admin()
