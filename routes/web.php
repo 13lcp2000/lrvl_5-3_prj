@@ -48,8 +48,19 @@ Route::get('/', 'FrontController@index');
 Route::get('contacto', 'FrontController@contacto');
 Route::get('resenias', 'FrontController@resenias');
 Route::get('admin', 'FrontController@admin');
+
+Route::get('password/email','Auth\ForgotPasswordController@getEmail');
+Route::post('password/email','Auth\ForgotPasswordController@postEmail');
+
+Route::get('password/reset/{token}','Auth\ResetPasswordController@getReset');
+Route::post('password/reset','Auth\ResetPasswordController@postReset');
+
 Route::resource('usuario', 'UsuarioController');
 Route::resource('genero', 'GeneroController');
 Route::get('generos', 'GeneroController@listing');
 Route::resource('log','LogController');
+Route::resource('correo','CorreoController');
 Route::get('logout','LogController@logout');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
